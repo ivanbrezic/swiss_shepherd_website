@@ -1,0 +1,149 @@
+.container {
+    max-width: $website-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+  }
+
+// Buttons
+%btn-shared {
+    display: inline-block;
+    padding: .8rem 2rem;
+    transition: transparent .5s;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    
+    &:hover {
+        transform: translateY(-2px);
+    }
+    &:active {
+        transform: translateY(1px);
+    }
+  }
+  
+  .btn {
+    &-main {
+      @extend %btn-shared;
+      color: $white-color;
+      background-color: $bg-color;
+      animation: moveInBottom 2.4s ease-out;
+      transform: translateY(3px);
+     
+    &:hover {
+      background: darken($bg-color, 15%)
+    }
+    }
+
+    &-section {
+      @extend %btn-shared;
+      color: $white-color;
+      background-color: $bg-color;
+     
+    &:hover {
+      background: darken($bg-color, 15%)
+    }
+    }
+  } 
+ 
+  // Text-center
+  .text-center {
+    text-align: center;
+  }
+
+  // Headings
+  .heading {
+    &-medium {
+      font-size: 2.5rem;
+      padding: 1rem 0;
+      font-weight: normal;
+    }
+    &-small {
+      font-size: 1.7rem;
+      padding: 1rem 0;
+      font-weight: normal;
+      font-family: 'Kaushan Script', cursive;
+    }
+    &-progress {
+      font-size: 1.7rem;
+      padding: 1rem 0;
+      font-weight: normal;
+    }
+    &-gallery {
+    font-size: 2.2rem;
+    padding: .5rem 0;
+    font-weight: normal;
+    font-family: 'Kaushan Script', cursive;
+    border-bottom: 2px solid $bg-color;
+    border-right: 2px solid $bg-color;
+    width: 30%;
+    text-align: center;
+    box-shadow: 4px 5px 5px;
+    margin-top: 1.5rem;
+    }
+    
+  }
+
+  //Word space
+  .w-space {
+    word-spacing: -.13rem;
+  }
+
+
+  // Padding
+  .py {
+    &-1 {
+      padding: 1rem 0;
+    }
+    &-2 {
+      padding: 2rem 0;
+    }
+    &-3 {
+      padding: 3rem 0;
+    }
+    &-4 {
+      padding: 4rem 0;
+    }
+    &-5 {
+      padding: 1rem 0 0 0;
+    }
+  }
+
+  //photos - section-home
+  %photo-shared {
+    width: 55%; 
+    border-radius: 2px;
+    box-shadow: .5rem .5rem .5rem rgba($dark-color, .6);
+    position: absolute;
+    transition: all .2s;
+    z-index: 2;
+
+    &:hover {
+      transform: scale(1.25);
+      box-shadow: .65rem .65rem .5rem rgba($dark-color, .7);
+      z-index: 3;
+      cursor: pointer;
+    }
+  }
+
+  .photo {
+    &-1 {
+      @extend %photo-shared;
+      left: -7rem;
+      top: 5rem;
+    }
+  
+    &-2 {
+      @extend %photo-shared;
+      right: 5rem;
+      top: 8rem;
+     
+    }
+  
+    &-3 {
+      @extend %photo-shared;
+    left: -2rem;
+    top: 17rem;
+    }
+
+  }

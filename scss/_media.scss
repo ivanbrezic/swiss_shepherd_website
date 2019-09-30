@@ -1,0 +1,399 @@
+// 4.-----------Tablets and smaller laptop(900-1200px)-------------
+@media (max-width: 1200px) {
+    // Header
+    #showcase{
+        height: 34rem;
+        
+        .showcase-content {
+            padding-top: 13rem;
+    
+            h1 {
+                font-size: 4rem; 
+            }
+    
+            p {
+                font-size: 1.2rem;
+            }
+    
+            .btn-main {
+                font-size: 1rem;
+                padding: .8rem 1.6rem;
+            }
+        }
+    }
+    
+    //Section-home - index.html
+    #section {
+        &-home {
+      
+          .content {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+      
+             .text-box {
+              margin-left: 0;
+
+              .btn-section {
+
+                  margin-top: 1rem;
+                  padding: .8rem 1.6rem;
+              }
+              }
+            }
+            .img-box {
+              display: none;
+            }
+          }
+      } 
+    
+    // Section about - timeline-about.html
+    #timeline { 
+    
+        .heading-medium {
+            font-size: 2rem;
+        }
+    
+        ul {
+            li {
+                padding-bottom: 1rem;
+                margin-left: 5.4rem;
+    
+                &:nth-child(even) div {
+                    left: 2.5rem;
+    
+                    &:before {
+                        left: -1rem;
+                        border-width: .5rem 1rem .5rem 0;
+                        border-color: transparent $box-color transparent transparent;
+                    }
+                }
+    
+                div {
+                    width: 45rem;
+    
+                    .heading-small {
+                        font-size: 1.5rem;
+                    }
+    
+                    p {
+                        font-size: 1rem;
+                    }
+    
+                }
+            }
+        }
+    } 
+    
+    // Section B: Progress Bars - about.html
+    #skill-bar {
+        .heading-medium {
+            font-size: 2.2rem;
+            padding: .5rem 0;
+        }
+    }
+    
+    // Gallery - gallery.html
+    #gallery {
+        .heading-gallery {
+            font-size: 1.7rem;
+        }
+    
+        .img-box {
+            img{
+                height: 200px;
+                width: 300px;
+                margin: .6rem;
+                box-shadow: .5rem .5rem .5rem rgba($dark-color, .6);
+              }
+        }
+    
+        .btn-section {
+            margin-top: .7rem;
+            padding: .8rem 1.6rem;
+        }
+        
+    }
+    // Footer
+    footer {
+        
+        p {
+            font-size: .9rem;
+        }
+    }
+    }
+
+// 3.-----------Tablets and smaller(660-900px)-------------
+@media (max-width: 900px) {
+    // Header
+    #showcase{
+        height: 39rem;
+
+        .showcase-content {
+            padding-top: 12rem;
+        }
+    }
+
+
+    //Section-home - index.html
+    #section {
+        &-home {
+      
+          .content {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+      
+             .text-box {
+              margin-left: 0;
+              }
+            }
+            .img-box {
+              display: none;
+            }
+          }
+      }  
+
+
+    // Section about - timeline-about.html
+#timeline { 
+
+    .heading-medium {
+        font-size: 1.5rem;
+        }
+    
+
+    ul {
+        li {
+            padding-bottom: 1rem;
+            margin-left: 1.4rem;
+
+            &:nth-child(even) div {
+                left: 2.5rem;
+
+                &:before {
+                    left: -1rem;
+                    border-width: .5rem 1rem .5rem 0;
+                    border-color: transparent $box-color transparent transparent;
+                }
+            }
+
+            div {
+                width: 33rem;
+
+                .heading-small {
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    font-size: .9rem;
+                }
+
+            }
+        }
+    }
+} 
+
+    // Section B: Progress Bars - about.html
+    #skill-bar{
+        padding-top: 1.5rem;
+
+        .heading-medium {
+            font-size: 2.2rem;
+            padding: .5rem 0;
+        }
+    }
+    }
+
+    
+// 2.-----------Smarthphones L(424-660px)---------------
+@media (max-width: 660px) {
+#navbar {
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+        margin: .5rem 0;
+    }
+
+    ul {
+        padding-bottom: .5rem;
+
+        li {
+           padding: 1rem 0;
+        }
+    }
+}
+// Header
+#showcase{
+    height: 34rem;
+    
+    .showcase-content {
+        padding-top: 13rem;
+
+        h1 {
+            font-size: 2.7rem; 
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        .btn-main {
+            font-size: .8rem;
+            padding: .5rem 1rem;
+            margin-top: -1rem;
+        }
+    }
+}
+
+//Section-home - index.html
+#section {
+    &-home {
+
+        .heading-medium {
+            font-size: 1.7rem;
+        }
+    
+        .btn-section{
+            font-size: .8rem;
+            padding: .5rem 1rem;
+            margin-top: -1rem;
+        }
+        
+    }
+}
+
+// Section about - timeline-about.html
+#timeline { 
+
+    .heading-medium {
+        font-size: 1.5rem;
+    }
+
+    ul {
+        li {
+            padding-bottom: 1rem;
+            margin-left: 1.4rem;
+
+            &:nth-child(even) div {
+                left: 2.5rem;
+
+                &:before {
+                    left: -1rem;
+                    border-width: .5rem 1rem .5rem 0;
+                    border-color: transparent $box-color transparent transparent;
+                }
+            }
+
+            div {
+                width: 20rem;
+
+                .heading-small {
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    font-size: .9rem;
+                }
+
+            }
+        }
+    }
+} 
+
+// Section B: Progress Bars - about.html
+#skill-bar {
+    .heading-medium {
+        font-size: 2.2rem;
+        padding: .5rem 0;
+    }
+}
+
+// Gallery - gallery.html
+#gallery {
+    .heading-gallery {
+        font-size: 1.7rem;
+    }
+
+    .img-box {
+        img{
+            height: 200px;
+            width: 300px;
+            margin: .6rem;
+            box-shadow: .5rem .5rem .5rem rgba($dark-color, .6);
+          }
+    }
+
+    .btn-section {
+        font-size: .8rem;
+        padding: .5rem 1rem;
+        margin-top: -1rem;
+    }
+    
+}
+// Footer
+footer {
+    
+    p {
+        font-size: .7rem;
+    }
+}
+}
+
+// 1.-----------Smarthphones S-M(0-424px)---------------
+@media (max-width: 424px) {
+    
+    // Header
+    #showcase{
+        height: 30rem;
+        
+        .showcase-content {
+            padding-top: 12rem;
+    
+            h1 {
+                font-size: 2rem; 
+            }
+        }
+    }
+    
+    //Section-home - index.html
+    #section {
+        &-home {
+        
+            .btn-section{
+                margin-top: 1rem;
+            }
+            
+        }
+    }
+    
+    // Section about - timeline-about.html
+#timeline {
+    ul {
+        li {
+           
+            div {
+                width: 15rem;
+
+                .heading-small {
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    font-size: .9rem;
+                }
+
+            }
+        }
+    }
+} 
+// Footer
+footer {
+        
+    p {
+        font-size: .6rem;
+    }
+}
+}
+
+
+    

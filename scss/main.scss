@@ -1,0 +1,322 @@
+@import "config";
+@import "utilities";
+@import "animations";
+
+// General Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Dosis', sans-serif;
+    line-height: 1.6;
+    letter-spacing: 2px; 
+    background: $light-bg-color; 
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    width: 100%;
+  }
+
+  // Navbar
+  .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+#navbar {
+    background-color: $dark-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    ul {
+        display: flex;
+        align-items: center;
+    }
+
+    li {
+        padding: 2.2rem 0.2rem;
+    }
+
+    a:not(.image-link) {
+        color: $white-color;
+        padding: 0.75rem 0.9rem;
+        transition: transparent .5s;
+        margin: 1rem;
+        
+     &:hover:not(.image-link),
+     &.current {
+        background: $bg-color;
+        border-radius: 5px;
+      }   
+    }  
+}
+
+// Showcase (Header)
+#showcase {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url('../img/4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    .showcase-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15%;
+    }
+
+    h1 {
+        color: $white-color;
+        font-size: 5rem;
+        animation: moveInLeft 2.4s ease-out;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      color: $white-color;
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      animation: moveInRight 2.4s ease-out; 
+    }
+}
+
+// Section-home
+#section {
+
+  &-home {
+    background: $light-bg-color;
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+       .text-box {
+        margin-left: -9rem;
+       
+         li {
+          font-size: 1.2rem;
+
+          &:hover {
+            color: darken($light-bg-color, 35%);
+            cursor: pointer;
+            transform: translateY(1px);
+          }
+
+          &:after {
+            content: ""; 
+            display: block; 
+            margin: 0 auto; 
+            width: 15%; 
+            padding-top: 10px;
+            border-bottom: 1px solid $border-color; 
+        }
+          }
+        }
+      }
+      .img-box {
+        position: relative;
+      }
+    }
+}
+
+// Section about.html - timeline
+#timeline {
+  background: rgba($light-bg-color, .6);
+  position: relative;
+
+  .bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .7;
+
+    .content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .animated {
+    animation: moveInBottom 2s ease-out;
+    font-size: 2rem;
+  }
+
+  ul {
+    padding: 4rem 0;
+
+    // Line
+    li {
+      position: relative;
+      width: 6px;
+      margin: 0 auto;
+      padding-top: .3rem;
+      background: $border-color;
+
+      // Dots
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 1.6rem;
+        height: 1.6rem;
+        background: $box-color;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        transition: background 1s ease-in-out;
+      }
+
+      // Right of the line
+      &:nth-child(odd) div {
+        left: 2.5rem;
+        animation: moveInRight 2s ease-out;
+
+        &:hover {
+          transform: scale(1.20);
+          cursor: pointer;
+          z-index: 4;
+        }
+
+        //Right Arrows
+        &:before {
+          left: -1rem;
+          border-width: .5rem 1rem .5rem 0;
+          border-color: transparent $box-color transparent transparent;
+        }
+      }
+
+      // Left of the line
+      &:nth-child(even) div {
+        left: -37rem;
+        animation: moveInLeft 2s ease-out;
+
+        &:hover {
+          transform: scale(1.20);
+          cursor: pointer;
+          z-index: 4;
+        }
+
+        //Left Arrows
+        &:before {
+          right: -1rem;
+          border-width: .5rem 0 .5rem 1rem;
+          border-color: transparent transparent transparent $box-color;
+        }
+      }
+
+      // Boxes
+      div {
+        position: relative;
+        bottom: 0;
+        width: 35rem;
+        padding: 1.5rem;
+        background: $box-color;
+        color: $white-color;
+        transition: all 1s ease-in-out;
+        border-radius: .5rem;
+        text-align: justify;
+        text-justify: inter-word;
+        
+        // Arrow base
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: .3rem;
+          width: 0;
+          height: 0;
+          border-style: solid;
+        }
+     }
+    }
+  }
+  
+}
+
+// Section about - Skill bar
+#skill-bar {
+  background: $bg-color;
+  color: $white-color;
+
+  .bottom-line {
+    height: 2px;
+    width: 3rem;
+    background: $border-color;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .progress {
+    overflow: hidden;
+    height: 20px;
+    background: $light-bg-color;
+    border-radius: 5px;
+    margin-bottom: 0.6rem;
+
+    div {
+      height: 100%;
+      color: #fff;
+      text-align: center;
+      background: $line-color;
+    }
+   }
+}
+
+// Section Gallery-gallery.html
+#gallery {
+  background: $light-bg-color;
+  
+
+  .img-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img{
+      height: 300px;
+      width: 450px;
+      margin: .6rem;
+      transition: all 1s;
+      box-shadow: .5rem .5rem .5rem rgba($dark-color, .6);
+
+      &:hover {
+        transform: scale(1.25);
+        box-shadow: .65rem .65rem .5rem rgba($dark-color, .7);
+        cursor: pointer;
+      }
+    }
+  }
+
+  a { 
+    margin: .5rem 0 2rem 0;
+  }
+}
+
+//Footer
+footer {
+  background-color: $dark-color;
+  color: $white-color;
+}
+
+// Import media
+@import 'media'; 
